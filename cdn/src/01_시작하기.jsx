@@ -18,11 +18,11 @@ function Hello() {
     return (
         // JSX의 끝에는 ; 쓰지 않는다.
         // return 안의 root는 1개 이어야 한다.
-        <div>
+        <div style={{margin:"12px"}}>
             {/* XML에서 빈 요소는 끝에 <img /> */}
             <img src="https://img.megabox.co.kr/SharedImg/2024/07/03/QaslTt607PkNH8mPWm6ZUH3UwDx2bHoH_420.jpg" alt="사랑의 하츄핑" />
             <div>
-                <span style={{padding:"0 4px",borderRadius:"3px",display:"inline", background:"red"}}>All</span>
+                <span style={{ padding: "0 4px", borderRadius: "3px", display: "inline", background: "red" }}>All</span>
                 {/* 속성={표현식} -> {{객체}} */}
                 {/* {{}} -> 바깥쪽 괄호는 표현식 */}
                 {/* {{}} -> 안쪽 객체 괄호 */}
@@ -44,10 +44,28 @@ function Hello() {
     );
 }
 
-// ReactDOM.render(자식요소, 부모요소)
+
+
 // 자식요소를 부모요소에 넣어 화면에 표시한다.
-ReactDOM.render(
-  // 컴포넌트 호출
-  <Hello />, // XML -> <빈 요소 /> 예) <img />
-    document.querySelector("#root")
-);
+function App(){
+    return (
+        <div style={{display: "flex"}}>
+            <Hello />
+            <Hello />
+            <Hello />
+            <Hello />
+        </div>
+    );
+}
+
+/* 
+    ReactDOM.render(요소, HTMLDOM컨테이너);
+        1. ReactDOM은 가상 DOM을 생성하는 객체
+        2. render()은 리액트 요소를 HTML DOM 컨테이너에 넣는 메서드
+        3. 요소는 XML로 리턴하는 컴포넌트의 리턴 값을 XML의 빈 요소로 쓴다.
+            예) <Hello />
+        4. 컨테이너는 HTML 페이지의 div#root를 말한다.
+*/
+
+// 출력 -> 렌더링
+ReactDOM.render(<App />,document.querySelector("#root"));
