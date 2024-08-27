@@ -107,9 +107,16 @@
         // }
         // 1. {}안에 문장이 1개이면 -> {} 생략
         // const var2 = (a)=> console.log(a);
+
         // 2. 매개변수가 1개이면 -> () 생략
-        const var2 = a => {return a;}
-       
+        //const var2 = a => {a;}  -> return 하지 않는다.
+
+        // 3. return 문을 사용하면 -> return 키워드 생략
+        // const var2 = function(a){return a};
+        // const var2 = a => {return a;}
+        const var2 = a => a;
+
+
 
         // 정규식(RegExp, Regular Expression)
             //  \n -> 줄바꿈
