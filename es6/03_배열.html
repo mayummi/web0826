@@ -39,7 +39,7 @@
 
                 배열.splice(추가할위치,제거할요소수,[추가할요소1], [추가할요소2], ...) 
                     -> 배열 갱신 또는 제거
-                배열.slice(숫자1, 숫자2)
+                배열.slice(숫자1, [숫자2]): 복제하여 일부를 잘라내기
 
                 배열.join("문자열") -> 문자열로 복제 결합 
 
@@ -67,6 +67,14 @@
         fruits.splice(0, 1, "비행기");
         fruits.splice(1, 2, "지하철", "버스");
         fruits.splice(3, 1);
+
+        // slice(숫자) -> 숫자에 해당하는 색인번호부터 끝까지 요소 복제하여 새로운 배열을 만든다.
+        const sliceM = fruits.slice(2);
+        console.log("slice 결과: ", sliceM);
+
+        // slice(숫자1, 숫자2) -> 첫 번째 숫자부터 두 번째 숫자-1 까지 요소를 복제하여 새로운 배열을 만든다.
+        const sliceM2 = fruits.slice(0,3);
+        console.log("slice 결과: ", sliceM2);
 
         const joinM = fruits.join("-");
         console.log("조인 결과: ", joinM);
