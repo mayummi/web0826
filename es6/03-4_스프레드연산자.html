@@ -39,6 +39,25 @@
         console.log("\n two: ", two); // 2
         console.log("\n ...rest: ", ...rest); // 3, 4, 5, 6
 
+        // 객체에 적용
+        const myVehicle = {
+            brand: 'Ford',
+            model: 'Mustang',
+            color: 'red'
+        }
+
+        const updateMyVehicle = {
+            type: 'car',
+            year: 2021,
+            // update(갱신): red -> yellow
+            color: 'yellow'
+        }
+
+        // 스프레드 연산 결과는 두 객체를 하나의 객체로 병합
+        // 이때 객체의 속성이 같으면 뒤에 기록한 배열로 적용된다.
+        const myUpdatedVehicle = { ...myVehicle, ...updateMyVehicle }
+
+        console.log("Car 스펙 갱신: ", updateMyVehicle);
     </script>
 </body>
 
