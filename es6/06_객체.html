@@ -65,7 +65,7 @@
         document.write("<hr>");
 
         // x는 배열의 아이템
-        for (x of person) {
+        for (const x of person) {
             document.write(x);
         }
 
@@ -89,7 +89,7 @@
         // x는 속성명, mb1.x는 속성값이다.
 
         document.write(`<ul>`);
-        for (x in mb1) {
+        for (const x in mb1) {
             console.log(x);
             document.write(`<li>${x}: ${mb1[x]}</li>`);
         }
@@ -106,7 +106,7 @@
         mb2["좋아요"] = "485";
 
         document.write(`<ul>`);
-        for (x in mb2) {
+        for (const x in mb2) {
             console.log(x);
             document.write(`<li>${x}: ${mb2[x]}</li>`);
         }
