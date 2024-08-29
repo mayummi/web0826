@@ -10,12 +10,13 @@
         /* 
             데이터 유형
                 1. 원시 데이터
-                    number: 자연수, 정수, 실수
+                    number: 자연수, 정수, 실수, NaN
                     string: ""또는 ''
                     boolean: true, false
-                2. 복합(참조) 데이터
+                    undefined: undefined
+                2. 복합(참조)(reference) 데이터
                     함수: function(){}
-                    객체: {}, []
+                    객체: {}, [], null
 
             생성자함수
 
@@ -41,23 +42,47 @@
         const person = [
             "요기 베라",
             "1925년 5월 12일",
-            "포수",
+            // "포수",
             "It ain't over till it's over(끝날때까지는 끝난 게 아니다.)"
         ];
 
         // 배열의 참조는 배열[색인번호]로 한다.
         // 빽틱, 보간법 -> ${표현식}
-        document.write(`${person[0]}가 한 명언 중 최고의 명언은 ${person[3]}이다.`)
+        document.write(`${person[0]}가 한 명언 중 최고의 명언은 ${person[3]}이다.`);
+
+        person[3] = 8;
+        document.write(`${person[0]}의 등번호는  ${person[3]}이다.`);
+
+        console.log(person);
+        document.write("<hr>");
+
+        // x는 배열의 아이템
+        for(x of person) {
+            document.write(x);
+        }
+
+
 
         // 인스턴스(객체) 생성
         const person1 = {
-            "이름": "요기 베라",
-            "사진": "https://i.namu.wiki/i/dpYOYYdqiFPG3XiZcfl6EwsXXX_R9FIhls8m2ZryeGBzkWzDGM9kH9t7RMrNpb80iQaNjgMVaUu_Auoz77Et-G7Xlll0c_csYg2BNhei1NzeUBS-pTcYlcQ-D5YPoJKYOH5F7w_nYoeZSmESNApasw.webp",
-            "생일": "1925년 5월 12일",
-            "직업": "포수",
-            "명언": "It ain't over till it's over(끝날때까지는 끝난 게 아니다.)"
+            "영화 이미지": "https://img.megabox.co.kr/SharedImg/2024/07/03/QaslTt607PkNH8mPWm6ZUH3UwDx2bHoH_420.jpg",
+            "영화 제목": "사랑의 하츄핑",
+            "예매율": 2.6,
+            "개봉일": "2024.08.07",
+            "좋아요": 490
         };
+        // 객체 참조(접근, access)
+        // 객체.속성 또는 객체["속성"]
+
         console.log(person1);
+
+        // x는 속성명
+        for(x in person1) {
+            document.write(x + "<br>");
+        }
+
+        person1.등번호 = 8;
+        document.write(`${person1["이름"]}의 등번호는 ${person1["등번호"]}번이다.`);
 
         const person2 = new Object();
         console.log(person2);
