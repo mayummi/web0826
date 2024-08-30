@@ -50,9 +50,11 @@ const hi = (
 */
 
 // 출력 -> 렌더링
-ReactDOM.render(hi, document.getElementById("root"));
+ReactDOM.render(hi, document.querySelectorAll(".item")[0]);
 
-const container = document.getElementById('root');
+// HTML DOM 요소 가져오기
+const container = document.querySelectorAll('.item').item(1);
+// 리액트 가상돔 요소 생성
 const root = ReactDOM.createRoot(container);
 root.render(<p>Hello</p>);
 
