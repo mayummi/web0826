@@ -2,34 +2,6 @@
 // m: movie
 // c: card
 
-/* 
-    배열
-        const 배열명 = [
-            객체1, 
-            객체2, 
-            객체3, 
-            객체4
-        ];
-
-    객체
-        {
-            속성: 값, 
-            속성: 값, 
-            ...
-        }
-
-
-        const 배열명 = [
-            {
-                속성: 값, 
-                속성: 값, 
-                ...
-            }, 
-            객체2, 
-            객체3, 
-            객체4
-        ];
-*/
 
 const cards = [
     {
@@ -66,4 +38,4 @@ const cards = [
     },
 ];
 
-// export default cards;
+export default cards;

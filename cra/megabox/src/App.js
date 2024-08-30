@@ -1,3 +1,8 @@
+
+// 확장자 .js 또는 .jsx는 생략가능
+import Card from "./Card";
+import cards from "./card_data";
+
 // App 컴포넌트
 function App(){
     return (
@@ -17,3 +22,8 @@ function App(){
         </ul>
     );
 }
+
+// 모듈화
+// 내보내기
+// export default 컴포넌트명;
+export default App;
